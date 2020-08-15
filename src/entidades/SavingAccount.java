@@ -9,7 +9,11 @@ package entidades;
  *
  * @author caiqu
  */
-public class SavingAccount extends Account {
+
+
+//final na classe impede que ela tenha herança 
+//public final class SavingAccount extends Account        
+public  class SavingAccount extends Account {
 
     private Double interestRate;
 
@@ -34,7 +38,8 @@ public class SavingAccount extends Account {
     }
 
     @Override
-    public void withdraw(double amount) {
+    //public final void withdraw(double amount) com final o metodo não pode ser sobreposto 
+    public final void withdraw(double amount) {
         balance -= amount;
     }
 
