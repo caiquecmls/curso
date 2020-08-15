@@ -13,14 +13,25 @@ public class OutsorcedEmployee extends Employee {
 
     private double additionalCharge;
 
+    public OutsorcedEmployee() {
+    }
+
     public OutsorcedEmployee(String nome, Integer hours, Double valuePerHour, double additionalCharge) {
         super(nome, hours, valuePerHour);
         this.additionalCharge = additionalCharge;
     }
 
+    public double getAdditionalCharge() {
+        return additionalCharge;
+    }
+
+    public void setAdditionalCharge(double additionalCharge) {
+        this.additionalCharge = additionalCharge;
+    }
+
     @Override
     public double payment() {
-        return hours * valuePerHour + (additionalCharge * (1 + 0.10));
+        return super.payment() + (additionalCharge * (1 + 0.10));
     }
 
 }

@@ -20,7 +20,7 @@ public class ProgramEmployee {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        List<Employee> list = new ArrayList();
+        List<Employee> list = new ArrayList<>();
         System.out.println("Enter the number of employees: ");
         int n = sc.nextInt();
         Employee emp;
