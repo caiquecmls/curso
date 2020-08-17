@@ -32,15 +32,15 @@ public class ImportedProduct extends Products {
 
     @Override
     public String priceTag() {
-        return name + " $ " + String.format("%.2f", totalPrice()) + " (Customs fee: $" + String.format("%.2f", customsFee)+")";
+        return getName() + " $ " + String.format("%.2f", totalPrice()) + " (Customs fee: $" + String.format("%.2f", customsFee)+")";
     }
 
     public double totalPrice() {
-        return price + customsFee;
+        return getPrice() + customsFee;
     }
 
-    @Override
-    public String toString() {
-        return priceTag();
-    }
+//    @Override
+//    public String toString() {
+//        return priceTag();
+//    }
 }

@@ -11,8 +11,8 @@ package entidades;
  */
 public class Products {
 
-    protected String name;
-    protected double price;
+    private String name;
+    private double price;
 
     public Products() {
     }
@@ -41,9 +41,10 @@ public class Products {
     public String priceTag() {
         return name + " $ " + String.format("%.2f", price);
     }
-
-    @Override
-    public String toString() {
-        return priceTag();
-    }
+    
+    //não preciso do toString, posso chamar direto o método priceTag.
+//    @Override
+//    public String toString() {
+//        return priceTag();
+//    }
 }
